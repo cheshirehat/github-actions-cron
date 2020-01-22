@@ -2,7 +2,7 @@ name: ScheduleCI
 
 on:
   schedule:
-    - cron:  '27 21 22 1 *'
+    - cron:  '50 21 22 1 *'
 jobs:
   build:
     name: Run Some Scheduled Thing
