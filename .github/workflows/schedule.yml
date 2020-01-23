@@ -2,15 +2,18 @@ name: ScheduleCI
 
 on:
   schedule:
-    - cron:  '23 2 23 1 *'
+    - cron:  '57 2 23 1 *'
+
 jobs:
   build:
     name: Run Some Scheduled Thing
     runs-on: ubuntu-latest
     steps:
-      - name: Slack Post 
+      - name: Start ScheduleCI
         run: |
             curl -X POST \
             -H "Content-Type: application/json" \
-            -d '{"text":"hello!"}' \
+            -d '{"text":"START!"}' \
             ${{ secrets.WEBHOOK_URL }}
+      - name: Run TRAP
+        run: ./trap.sh
