@@ -1,14 +1,14 @@
 name: ScheduleCI
 
-on:
-  schedule:
-    - cron:  '30 4 23 1 *'
+on: push
 
 jobs:
   build:
     name: Run Some Scheduled Thing
     runs-on: ubuntu-latest
     steps:
+      - name: checkout
+        uses: actions/checkout@v1
       - name: Echo Shell Script
         run: ./echo.sh
       - name: Start ScheduleCI
