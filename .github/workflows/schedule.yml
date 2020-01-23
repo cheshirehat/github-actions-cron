@@ -9,6 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Slack Post 
-        run: curl -X POST -H "Content-Type: application/json" \
-            --d '{"text":"hello!"}' \
-            ${{ secrets.WEBHOOK_URL }}
+        run: echo
