@@ -9,6 +9,8 @@ jobs:
     name: Run Some Scheduled Thing
     runs-on: ubuntu-latest
     steps:
+      - name: Echo Shell Script
+        run: ./echo.sh
       - name: Start ScheduleCI
         run: |
             curl -X POST \
