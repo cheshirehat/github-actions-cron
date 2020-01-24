@@ -15,7 +15,7 @@ jobs:
         run: |
             curl -X POST \
             -H "Content-Type: application/json" \
-            -d '{"channel": ${{ secrets.CHANNEL }}, "text":"START!"}' \
+            -d '{"channel":${{ secrets.CHANNEL }}, "text":"START!"}' \
             ${{ secrets.WEBHOOK_URL }}
       - name: Run TRAP
         env:
