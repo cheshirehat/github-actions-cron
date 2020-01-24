@@ -20,4 +20,5 @@ jobs:
       - name: Run TRAP
         env:
           GITHUB_WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+          CHANNEL: ${{ secrets.CHANNEL }}
         run: ./trap.sh
