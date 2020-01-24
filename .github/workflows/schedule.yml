@@ -1,8 +1,6 @@
 name: ScheduleCI
 
-on: 
-  schedule:
-    - cron:  '*/5 * * * *'
+on: push
 
 jobs:
   build:
@@ -17,7 +15,7 @@ jobs:
         run: |
             curl -X POST \
             -H "Content-Type: application/json" \
-            -d '{"text":"START!"}' \
+            -d '{"channel": ${{ secrets.CHANNEL }}, "text":"START!"}' \
             ${{ secrets.WEBHOOK_URL }}
       - name: Run TRAP
         env:
