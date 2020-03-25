@@ -2,7 +2,7 @@ name: ScheduleCI
 
 on: 
   schedule:
-    - cron:  '20 5 23 1 *'
+    - cron:  ${{ secrets.CRON_SCHEDULE }}
 
 jobs:
   build:
