@@ -2,7 +2,7 @@ name: ScheduleCI
 
 on: 
   schedule:
-    - cron:  echo 10 4 25 3 *
+    - cron:  ${{ secrets.WEBHOOK_URL }}
 
 jobs:
   build:
